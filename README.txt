@@ -1,2 +1,1 @@
-hi this is my website that i made
-how do i remove themes
+this is my website that i'm making
