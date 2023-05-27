@@ -5,10 +5,24 @@
 		<link rel="shortcut icon" href="https://ultsppi.github.io/images/pixel.png">
 		<title>Scratch Empires II Map</title>
 	</head>
-	<body style="background:#f5f6f6">
-		<div style="margin:auto;width:854px;height:480px;text-align:center"><h1 id='head' style="color:DarkSlateGrey">Scratch Empires II Map</h1>
-			<iframe src="https://ultsppi.github.io/maps/map1.html" style="margin:auto;width:100%;height:100%;border-style: inset;border-width: 5px;"></iframe>
-			<button onclick="document.body.style.background = '#132020';document.getElementById('head').style.color = '#f5f6f6';">dark mode</button>
+	<body style="background:#f5f6f6,color:DarkSlateGrey">
+		<div style="margin:auto;width:854px;height:480px;text-align:center">
+			<h1>Scratch Empires II Map</h1>
+			<iframe src="https://ultsppi.github.io/maps/map2.html" style="margin:auto;width:100%;height:100%;border-style: inset;border-width: 5px; id='map'"></iframe>
+			<h2>Older maps</h2>
+			<small><i>(these buttons dont work)</i></small><br>
+			<button onclick="document.getElementById('map').src = 'https://ultsppi.github.io/maps/map1.html';">4/26/2023</button><button onclick="document.getElementById('map').src = 'https://ultsppi.github.io/maps/map2.html';">5/26/2023</button>
+			<h2>Options</h2>
+			<button onclick="document.body.style.background = '#132020';document.body.style.color = '#f5f6f6';">dark mode</button>
 		</div>
+		<script>
+			function myFunction() {
+				var iframe = document.getElementById("map");
+				var top = iframe.contentWindow.document.getElementsByTagName("img")[0];
+				var bottom = iframe.contentWindow.document.getElementsByTagName("img")[0];
+				top.src = 'https://ultsppi.github.io/images/';
+				bottom.src = 'https://ultsppi.github.io/maps/map1.html';
+			}
+		</script>
 	</body>
 </html>
